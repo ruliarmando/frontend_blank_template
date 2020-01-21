@@ -1,5 +1,11 @@
 import React from 'react';
-import { UncontrolledDropdown, DropdownItem, DropdownMenu, DropdownToggle, Nav } from 'reactstrap';
+import {
+  UncontrolledDropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Nav
+} from 'reactstrap';
 
 import { AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
 import logo from '../../assets/img/brand/logo.svg';
@@ -13,7 +19,6 @@ const DefaultHeader = () => (
       minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
     />
     <AppSidebarToggler className="d-md-down-none" display="lg" />
-
     <Nav className="ml-auto" navbar>
       <UncontrolledDropdown nav direction="down">
         <DropdownToggle nav>
