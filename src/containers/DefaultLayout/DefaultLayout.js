@@ -1,8 +1,7 @@
-import React, { Component, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import * as router from 'react-router-dom';
 import { Container } from 'reactstrap';
-
 import {
   AppFooter,
   AppHeader,
@@ -14,6 +13,7 @@ import {
   AppBreadcrumb2 as AppBreadcrumb,
   AppSidebarNav2 as AppSidebarNav,
 } from '@coreui/react';
+
 import navigation from '../../_nav';
 import routes from '../../routes';
 
