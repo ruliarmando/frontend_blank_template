@@ -20,10 +20,11 @@ import routes from '../../routes';
 const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
 const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
 
-const DefaultLayout = ({ history }) => {
+const DefaultLayout = (props) => {
   const loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>;
 
   const signOut = e => {
+    const { history } = props;
     e.preventDefault();
     history.push('/login');
   };
@@ -40,7 +41,7 @@ const DefaultLayout = ({ history }) => {
           <AppSidebarHeader />
           <AppSidebarForm />
           <Suspense>
-            <AppSidebarNav navConfig={navigation} {...this.props} router={router} />
+            <AppSidebarNav navConfig={navigation} {...props} router={router} />
           </Suspense>
           <AppSidebarFooter />
           <AppSidebarMinimizer />
